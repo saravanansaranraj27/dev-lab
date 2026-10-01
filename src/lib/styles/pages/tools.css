@@ -1,0 +1,856 @@
+.page-tools .tool-shell {
+	padding: 0;
+	overflow: hidden;
+	border-radius: 15px;
+}
+.page-tools .tool-tabs {
+	display: flex;
+	gap: 4px;
+	padding: 9px;
+	overflow: auto;
+	border-bottom: 1px solid var(--line);
+}
+.page-tools .tool-tabs button {
+	min-height: 34px;
+	padding: 0 11px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	background: transparent;
+	color: var(--muted);
+	font-size: 12px;
+	white-space: nowrap;
+}
+.page-tools .tool-tabs button.active {
+	color: var(--primary-soft);
+	border-color: color-mix(in srgb, var(--primary) 25%, transparent);
+	background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+.page-tools .tool-head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 15px;
+	padding: 20px 20px 8px;
+}
+.page-tools .tool-head h2 {
+	margin: 7px 0 0;
+	font-size: 18px;
+	letter-spacing: -0.03em;
+}
+.page-tools .tool-actions {
+	display: flex;
+	gap: 7px;
+}
+.page-tools .tool-grid,
+.page-tools .regex-fields {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	padding: 12px 20px 20px;
+}
+.page-tools .regex-fields {
+	grid-template-columns: 1fr 160px;
+}
+.page-tools .regex-fields .full {
+	grid-column: 1 / -1;
+}
+.page-tools textarea {
+	min-height: 260px;
+}
+.page-tools .field pre {
+	min-height: 260px;
+	margin: 0;
+	overflow: auto;
+	padding: 12px;
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	background: var(--bg-elevated);
+	color: var(--text-2);
+	white-space: pre-wrap;
+	font:
+		13px/1.7 ui-monospace,
+		monospace;
+}
+.page-tools .match-strip {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 7px;
+	margin: 0 20px 20px;
+	padding: 11px;
+	border: 1px solid var(--line);
+	border-radius: 9px;
+	background: var(--surface-2);
+	color: var(--muted);
+	font-size: 14px;
+}
+.page-tools .match-strip strong {
+	color: var(--primary);
+	font-size: 15px;
+}
+.page-tools .match-strip code {
+	flex-basis: 100%;
+	color: var(--text-2);
+	white-space: pre-wrap;
+}
+.page-tools .error {
+	margin: 0 20px 12px;
+	padding: 10px;
+	border-radius: 8px;
+	background: color-mix(in srgb, var(--danger) 7%, transparent);
+	color: var(--danger);
+	font-size: 14px;
+}
+.page-tools .copy {
+	margin: 0 20px 20px;
+}
+@media (max-width: 720px) {
+	.page-tools .tool-head {
+		display: block;
+	}
+	.page-tools .tool-actions {
+		margin-top: 10px;
+	}
+	.page-tools .tool-grid,
+	.page-tools .regex-fields {
+		grid-template-columns: 1fr;
+	}
+	.page-tools .regex-fields .full {
+		grid-column: auto;
+	}
+	.page-tools .tool-grid,
+	.page-tools .regex-fields {
+		padding: 10px 14px 14px;
+	}
+	.page-tools .tool-head {
+		padding: 16px 14px 4px;
+	}
+	.page-tools .error,
+	.page-tools .match-strip {
+		margin-left: 14px;
+		margin-right: 14px;
+	}
+	.page-tools .copy {
+		margin-left: 14px;
+		margin-right: 14px;
+	}
+}
+
+.page-learning-notes {
+	padding: 20px;
+	margin-top: 14px;
+	border-radius: 14px;
+}
+
+.page-learning-notes h3 {
+	margin: 7px 0 14px;
+	font-size: 20px;
+}
+.page-learning-notes .notes-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+.page-learning-notes .notes-grid div {
+	padding: 14px;
+	border: 1px solid var(--line);
+	border-radius: 11px;
+	background: var(--bg-elevated);
+}
+.page-learning-notes .notes-grid strong {
+	display: block;
+	margin-bottom: 5px;
+}
+.page-learning-notes .notes-grid p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 13px;
+	line-height: 1.65;
+}
+@media (max-width: 760px) {
+	.page-learning-notes .notes-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.page-tools .regex-sample-output {
+	margin-top: 12px;
+}
+.page-tools .regex-sample-output pre {
+	min-height: 112px;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: left;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+.page-tools .tool-workspace {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 10px;
+	padding: 10px 20px 20px;
+}
+.page-tools .tool-editor,
+.page-tools .tool-output {
+	min-width: 0;
+	border-radius: 12px;
+}
+.page-tools .tool-editor {
+	padding: 14px;
+}
+.page-tools .tool-input-field {
+	margin: 0;
+}
+.page-tools .tool-input-field textarea {
+	min-height: 310px;
+}
+.page-tools .regex-fields {
+	grid-template-columns: minmax(0, 1fr) 140px;
+	padding: 0;
+}
+.page-tools .regex-fields .full {
+	grid-column: 1 / -1;
+}
+.page-tools .regex-fields textarea {
+	min-height: 210px;
+}
+.page-tools .tool-runbar {
+	display: flex;
+	justify-content: flex-end;
+	gap: 7px;
+	margin-top: 12px;
+}
+.page-tools .tool-output {
+	display: flex;
+	flex-direction: column;
+}
+.page-tools .tool-output .devlab-console {
+	flex: 1 1 auto;
+}
+.page-tools .match-strip {
+	margin: 8px 0 0;
+}
+.page-tools .copy {
+	align-self: flex-end;
+	margin: 8px 0 0;
+}
+@media (max-width: 850px) {
+	.page-tools .tool-workspace {
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 560px) {
+	.page-tools .tool-workspace {
+		padding: 8px 14px 14px;
+	}
+	.page-tools .tool-input-field textarea {
+		min-height: 250px;
+	}
+	.page-tools .regex-fields {
+		grid-template-columns: 1fr;
+	}
+	.page-tools .regex-fields .full {
+		grid-column: auto;
+	}
+}
+
+.page-tools .tool-playground-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 12px;
+	min-width: 0;
+	padding: 0 20px 20px;
+}
+.page-tools .tool-playground-grid .editor-panel,
+.page-tools .tool-playground-grid .output-panel {
+	min-width: 0;
+	overflow: hidden;
+	border-radius: 14px;
+}
+.page-tools .tool-playground-grid .panel-bar {
+	min-height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 0 15px;
+	border-bottom: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 13px;
+	font-weight: 650;
+}
+.page-tools .tool-playground-grid .file-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+.page-tools .tool-playground-grid .file-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--primary);
+}
+.page-tools .tool-playground-grid .tool-editor {
+	padding: 0;
+}
+.page-tools .tool-playground-grid .tool-input-field {
+	display: grid;
+	gap: 7px;
+	margin: 0;
+	padding: 19px;
+}
+.page-tools .tool-playground-grid .tool-input-field > span,
+.page-tools .tool-playground-grid .field > span {
+	color: var(--muted);
+	font-size: 12px;
+	font-weight: 650;
+}
+.page-tools .tool-playground-grid textarea,
+.page-tools .tool-playground-grid input {
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid var(--line);
+	border-radius: 9px;
+	background: var(--code-bg);
+	color: var(--code-text);
+	font:
+		13px/1.7 ui-monospace,
+		SFMono-Regular,
+		Menlo,
+		Monaco,
+		Consolas,
+		'Liberation Mono',
+		monospace;
+}
+.page-tools .tool-playground-grid .tool-input-field textarea {
+	min-height: 520px;
+	padding: 19px;
+	resize: vertical;
+}
+.page-tools .tool-playground-grid .regex-fields {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(110px, 140px);
+	gap: 12px;
+	padding: 16px 19px 0;
+}
+
+.page-tools .tool-playground-grid .regex-fields .field {
+	display: grid;
+	gap: 7px;
+	min-width: 0;
+}
+
+.page-tools .tool-playground-grid .regex-fields .full {
+	grid-column: 1 / -1;
+}
+
+.page-tools .tool-playground-grid .regex-fields input {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 44px;
+	padding: 10px 12px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--code-bg);
+	color: var(--code-text);
+}
+
+.page-tools .tool-playground-grid .regex-fields input:focus {
+	border-color: color-mix(in srgb, var(--primary) 55%, var(--line));
+	outline: none;
+	box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+.page-tools .tool-playground-grid .regex-fields textarea {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 370px;
+	padding: 19px;
+	resize: vertical;
+}
+
+.page-tools .tool-playground-grid .tool-editor-actions {
+	margin-top: 0;
+	padding: 10px 15px;
+}
+.page-tools .tool-runbar {
+	display: flex;
+	gap: 7px;
+}
+.page-tools .tool-playground-grid .output-panel {
+	min-height: 520px;
+}
+.page-tools .tool-playground-grid .devlab-console {
+	height: 100%;
+	min-height: 520px;
+	border-radius: 14px;
+}
+.page-tools .match-strip {
+	margin: 12px 20px 0;
+}
+.page-tools .tool-copy-row {
+	display: flex;
+	justify-content: flex-end;
+	margin: 8px 20px 0;
+}
+@media (max-width: 850px) {
+	.page-tools .tool-playground-grid {
+		grid-template-columns: 1fr;
+	}
+	.page-tools .tool-playground-grid .output-panel,
+	.page-tools .tool-playground-grid .devlab-console {
+		min-height: 390px;
+	}
+}
+@media (max-width: 560px) {
+	.page-tools .tool-playground-grid {
+		padding-inline: 14px;
+	}
+	.page-tools .tool-playground-grid .tool-input-field {
+		padding: 14px;
+	}
+	.page-tools .tool-playground-grid .tool-input-field textarea {
+		min-height: 330px;
+	}
+	.page-tools .tool-playground-grid .regex-fields {
+		grid-template-columns: 1fr;
+		padding: 14px;
+	}
+	.page-tools .tool-playground-grid .regex-fields .full {
+		grid-column: auto;
+	}
+	.page-tools .match-strip,
+	.page-tools .tool-copy-row {
+		margin-inline: 14px;
+	}
+}
+
+.page-tools .playground-toolbar {
+	position: relative;
+	overflow: visible;
+	z-index: 10;
+	display: grid;
+	grid-template-columns: minmax(180px, 230px) 1fr auto;
+	align-items: end;
+	gap: 18px;
+	padding: 18px;
+	margin-bottom: 14px;
+	border-radius: 15px;
+}
+.page-tools .playground-context {
+	min-width: 0;
+}
+.page-tools .playground-context strong {
+	display: block;
+	margin-top: 5px;
+	font-size: 17px;
+}
+.page-tools .playground-context p {
+	margin: 4px 0 0;
+	color: var(--muted);
+	font-size: 14px;
+}
+.page-tools .actions {
+	display: flex;
+	gap: 8px;
+}
+.page-tools .editor-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 12px;
+	min-width: 0;
+}
+.page-tools .editor-panel,
+.page-tools .output-panel {
+	min-width: 0;
+	overflow: hidden;
+	border-radius: 14px;
+}
+.page-tools .panel-bar {
+	min-height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 0 15px;
+	border-bottom: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 13px;
+	font-weight: 650;
+}
+.page-tools .file-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+.page-tools .file-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--primary);
+}
+.page-tools .tool-editor {
+	display: flex;
+	flex-direction: column;
+	min-height: 520px;
+}
+.page-tools .tool-input-field {
+	padding: 18px 15px 0;
+}
+.page-tools .tool-input-field span,
+.page-tools .regex-fields .field span {
+	display: block;
+	margin-bottom: 7px;
+	color: var(--muted);
+	font-size: 12px;
+	font-weight: 650;
+}
+.page-tools .tool-input-field textarea {
+	width: 100%;
+	min-height: 390px;
+}
+.page-tools .regex-fields {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 120px;
+	gap: 12px;
+	padding: 18px 15px 0;
+}
+.page-tools .regex-fields .full {
+	grid-column: 1 / -1;
+}
+.page-tools .regex-fields textarea {
+	width: 100%;
+	min-height: 290px;
+}
+.page-tools .tool-editor-actions {
+	margin-top: auto;
+}
+.page-tools .tool-runbar {
+	display: flex;
+	gap: 8px;
+}
+.page-tools .tool-output {
+	min-height: 520px;
+}
+@media (max-width: 850px) {
+	.page-tools .playground-toolbar {
+		grid-template-columns: minmax(170px, 210px) 1fr;
+	}
+	.page-tools .actions {
+		grid-column: 1 / -1;
+	}
+	.page-tools .editor-grid {
+		grid-template-columns: 1fr;
+	}
+	.page-tools .tool-editor,
+	.page-tools .tool-output {
+		min-height: 390px;
+	}
+	.page-tools .tool-input-field textarea {
+		min-height: 270px;
+	}
+}
+@media (max-width: 600px) {
+	.page-tools .playground-toolbar {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+	.page-tools .actions {
+		grid-column: auto;
+		width: 100%;
+	}
+	.page-tools .actions .button {
+		flex: 1;
+	}
+	.page-tools .regex-fields {
+		grid-template-columns: 1fr;
+	}
+	.page-tools .regex-fields .full {
+		grid-column: auto;
+	}
+}
+.page-tools .tool-playground-grid .regex-fields {
+	grid-template-columns: minmax(0, 1fr);
+	gap: 10px;
+	padding: 14px;
+}
+
+.page-tools .tool-playground-grid .regex-fields .full {
+	grid-column: 1;
+}
+
+.page-tools .tool-playground-grid .regex-fields input {
+	min-height: 42px;
+}
+
+.page-tools .tool-playground-grid .regex-fields textarea {
+	min-height: 300px;
+}
+
+.page-tools .playground-toolbar {
+	position: relative;
+	overflow: visible;
+	z-index: 10;
+	display: grid;
+	grid-template-columns: minmax(180px, 230px) 1fr auto;
+	align-items: end;
+	gap: 18px;
+	padding: 18px;
+	margin-bottom: 14px;
+	border-radius: 15px;
+}
+.page-tools .playground-context {
+	min-width: 0;
+}
+.page-tools .playground-context strong {
+	display: block;
+	margin-top: 5px;
+	font-size: 17px;
+}
+.page-tools .playground-context p {
+	margin: 4px 0 0;
+	color: var(--muted);
+	font-size: 14px;
+}
+.page-tools .actions {
+	display: flex;
+	gap: 8px;
+}
+.page-tools .editor-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 12px;
+	min-width: 0;
+}
+.page-tools .editor-panel,
+.page-tools .output-panel {
+	min-width: 0;
+	overflow: hidden;
+	border-radius: 14px;
+}
+.page-tools .panel-bar {
+	min-height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 0 15px;
+	border-bottom: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 13px;
+	font-weight: 650;
+}
+.page-tools .file-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+.page-tools .file-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--primary);
+}
+.page-tools .editor-footer {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 10px 15px;
+	border-top: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 12px;
+}
+.page-tools .playground-toolbar .field,
+.page-tools .playground-toolbar .mode-field {
+	min-width: 0;
+}
+.page-tools .playground-toolbar .field > span {
+	display: block;
+	margin-bottom: 7px;
+	color: var(--muted);
+	font-size: 12px;
+	font-weight: 650;
+}
+.page-tools .api-playground-grid .api-editor,
+.page-tools .tool-playground-grid .tool-editor {
+	background: var(--bg-elevated);
+}
+.page-tools .api-playground-grid input,
+.page-tools .api-playground-grid textarea,
+.page-tools .tool-playground-grid input,
+.page-tools .tool-playground-grid textarea {
+	box-sizing: border-box;
+	width: 100%;
+	border: 0;
+	border-radius: 0;
+	background: var(--code-bg);
+	color: var(--code-text);
+	font:
+		15px/1.75 ui-monospace,
+		SFMono-Regular,
+		Menlo,
+		Monaco,
+		Consolas,
+		'Liberation Mono',
+		monospace;
+}
+.page-tools .api-playground-grid input {
+	min-height: 48px;
+	padding: 12px 19px;
+	border-bottom: 1px solid var(--line);
+}
+.page-tools .api-playground-grid textarea {
+	min-height: 132px;
+	padding: 19px;
+	resize: vertical;
+	border-top: 1px solid var(--line);
+}
+.page-tools .tool-playground-grid .tool-input-field {
+	display: grid;
+	gap: 0;
+	margin: 0;
+	padding: 0;
+}
+.page-tools .tool-playground-grid .tool-input-field > span,
+.page-tools .tool-playground-grid .regex-fields .field > span {
+	display: block;
+	padding: 10px 15px;
+	border-bottom: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 12px;
+	font-weight: 650;
+	background: var(--bg-elevated);
+}
+.page-tools .tool-playground-grid .tool-input-field textarea {
+	min-height: 520px;
+	padding: 19px;
+	resize: vertical;
+}
+.page-tools .tool-playground-grid .regex-fields {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 140px;
+	gap: 0;
+	padding: 0;
+}
+.page-tools .tool-playground-grid .regex-fields .field {
+	display: grid;
+	gap: 0;
+}
+.page-tools .tool-playground-grid .regex-fields .full {
+	grid-column: 1 / -1;
+}
+.page-tools .tool-playground-grid .regex-fields input {
+	min-height: 48px;
+	padding: 12px 15px;
+}
+.page-tools .tool-playground-grid .regex-fields textarea {
+	min-height: 370px;
+	padding: 19px;
+	resize: vertical;
+}
+.page-tools .tool-playground-grid .tool-editor-actions,
+.page-tools .api-playground-grid .api-editor-actions {
+	margin-top: 0;
+	padding: 10px 15px;
+}
+.page-tools .tool-playground-grid .output-panel,
+.page-tools .api-playground-grid .output-panel {
+	min-height: 520px;
+}
+.page-tools .tool-playground-grid .devlab-console,
+.page-tools .api-playground-grid .devlab-console {
+	height: 100%;
+	min-height: 520px;
+	border-radius: 14px;
+	display: flex;
+	flex-direction: column;
+}
+.page-tools .tool-playground-grid .devlab-console .output,
+.page-tools .api-playground-grid .devlab-console .output {
+	flex: 1 1 auto;
+	min-height: 0;
+	max-height: none;
+}
+@media (max-width: 1050px) {
+	.page-tools .playground-toolbar {
+		grid-template-columns: minmax(170px, 210px) 1fr;
+	}
+	.page-tools .actions {
+		grid-column: 1 / -1;
+	}
+}
+@media (max-width: 850px) {
+	.page-tools .editor-grid {
+		grid-template-columns: 1fr;
+	}
+	.page-tools .tool-playground-grid .output-panel,
+	.page-tools .api-playground-grid .output-panel,
+	.page-tools .tool-playground-grid .devlab-console,
+	.page-tools .api-playground-grid .devlab-console {
+		min-height: 390px;
+	}
+	.page-tools .tool-playground-grid .tool-input-field textarea {
+		min-height: 390px;
+	}
+}
+@media (max-width: 600px) {
+	.page-tools .playground-toolbar {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+	.page-tools .actions {
+		grid-column: auto;
+		width: 100%;
+	}
+	.page-tools .actions .button {
+		flex: 1;
+	}
+}
+@media (max-width: 480px) {
+	.page-tools .playground-toolbar {
+		padding: 14px;
+	}
+	.page-tools .panel-bar {
+		min-height: 44px;
+		padding-inline: 12px;
+	}
+	.page-tools .tool-playground-grid .tool-input-field textarea,
+	.page-tools .api-playground-grid textarea {
+		min-height: 330px;
+		font-size: 14px;
+	}
+}
+.page-tools .tool-playground-grid .regex-fields {
+	gap: 9px;
+	padding: 12px;
+}
+
+.page-tools .tool-playground-grid .regex-fields textarea {
+	min-height: 260px;
+	padding: 14px;
+}
+
+.page-tools .tool-playground-grid .tool-editor-actions {
+	display: flex;
+}
+.page-tools .tool-playground-grid .tool-input-field > span {
+	display: none;
+}
+.page-tools .tool-playground-grid .tool-input-field textarea {
+	border-top: 0;
+}
+.page-tools .tool-playground-grid .tool-runbar {
+	display: none;
+}
+
+.page-tools .tool-playground-grid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.page-tools .tool-playground-grid {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}

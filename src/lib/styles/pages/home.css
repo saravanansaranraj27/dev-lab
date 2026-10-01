@@ -1,0 +1,407 @@
+.page-home .hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+	gap: 28px;
+	align-items: center;
+	min-height: 330px;
+	padding: 34px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.page-home .hero-copy {
+	max-width: 680px;
+}
+.page-home .hero h2 {
+	margin: 12px 0;
+	font-size: clamp(38px, 5vw, 62px);
+	line-height: 0.98;
+	letter-spacing: -0.065em;
+}
+
+.page-home .hero h2 em {
+	color: var(--primary);
+	font-style: normal;
+}
+.page-home .hero p {
+	max-width: 600px;
+	color: var(--muted);
+	font-size: 17px;
+	line-height: 1.7;
+}
+.page-home .hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 9px;
+	margin-top: 24px;
+}
+
+.page-home .hero-console {
+	min-width: 0;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	border-radius: 13px;
+	background: var(--code-bg);
+	box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+}
+
+.page-home .console-bar {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 10px 12px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.page-home .console-bar > span {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #555;
+}
+.page-home .console-bar small {
+	margin-left: 6px;
+	color: #777;
+	font-size: 14px;
+}
+.page-home .hero-console pre {
+	margin: 0;
+	padding: 22px;
+	overflow: auto;
+	color: var(--code-text);
+	font-size: 14px;
+	line-height: 1.9;
+}
+.page-home .kw {
+	color: var(--code-keyword);
+}
+.page-home .str {
+	color: var(--code-string);
+}
+.page-home .num {
+	color: var(--code-number);
+}
+.page-home .fn {
+	color: var(--code-function);
+}
+.page-home .comment {
+	color: var(--code-comment);
+}
+
+.page-home .quick-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	margin: 12px 0 32px;
+}
+
+.page-home .quick {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	min-height: 88px;
+	padding: 14px;
+	border-radius: 13px;
+}
+
+.page-home .quick-icon {
+	width: 35px;
+	height: 35px;
+	display: grid;
+	place-items: center;
+	flex: 0 0 35px;
+	border-radius: 9px;
+	color: var(--primary);
+	background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+
+.page-home .quick strong {
+	font-size: 15px;
+}
+.page-home .quick p {
+	margin: 4px 0 0;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.5;
+}
+.page-home kbd {
+	padding: 2px 4px;
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	font:
+		11px ui-monospace,
+		monospace;
+}
+
+.page-home .section-head,
+.page-home .panel-head {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 15px;
+}
+
+.page-home .section-head {
+	margin-bottom: 13px;
+}
+.page-home .section-head h3,
+.page-home .panel-head h3 {
+	margin: 5px 0 0;
+	font-size: 20px;
+	letter-spacing: -0.02em;
+}
+.page-home .count,
+.page-home .panel-head > a {
+	color: var(--muted);
+	font-size: 14px;
+}
+.page-home .panel-head > a {
+	color: var(--primary);
+}
+
+.page-home .lab-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+.page-home .lab-card {
+	position: relative;
+	min-height: 188px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 18px;
+	padding: 19px;
+	border-radius: 14px;
+	transition:
+		transform 0.16s ease,
+		border-color 0.16s ease;
+}
+
+.page-home .lab-card:hover {
+	transform: translateY(-3px);
+	border-color: color-mix(in srgb, var(--primary) 27%, transparent);
+}
+.page-home .lab-icon {
+	color: var(--primary);
+	font-size: 24px;
+}
+.page-home .lab-card strong {
+	font-size: 16px;
+}
+.page-home .lab-card p {
+	margin: 7px 0 0;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.65;
+}
+.page-home .arrow {
+	color: var(--primary);
+	font-size: 12px;
+}
+
+.page-home .lab-card > .arrow {
+	position: absolute;
+	right: 16px;
+	bottom: 17px;
+}
+
+.page-home .lower-grid {
+	display: grid;
+	grid-template-columns: 1.15fr 0.85fr;
+	gap: 10px;
+	margin-top: 12px;
+}
+
+.page-home .panel {
+	padding: 22px;
+	border-radius: 14px;
+}
+.page-home .lesson-list,
+.page-home .reference-list {
+	margin-top: 16px;
+}
+.page-home .lesson-row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 11px 0;
+	border-top: 1px solid var(--line);
+}
+
+.page-home .lesson-number {
+	width: 34px;
+	height: 34px;
+	display: grid;
+	place-items: center;
+	border-radius: 8px;
+	background: var(--surface-2);
+	color: var(--primary);
+	font:
+		800 12px ui-monospace,
+		monospace;
+}
+
+.page-home .lesson-copy {
+	min-width: 0;
+	flex: 1;
+}
+.page-home .lesson-copy strong,
+.page-home .lesson-copy small {
+	display: block;
+}
+.page-home .lesson-copy strong {
+	font-size: 15px;
+}
+.page-home .lesson-copy small {
+	margin-top: 3px;
+	color: var(--muted);
+	font-size: 15px;
+}
+
+.page-home .reference-list {
+	display: grid;
+	gap: 8px;
+}
+.page-home .reference-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 13px;
+	border: 1px solid var(--line);
+	border-radius: 10px;
+}
+.page-home .reference-row span {
+	min-width: 0;
+}
+.page-home .reference-row strong,
+.page-home .reference-row small {
+	display: block;
+}
+.page-home .reference-row strong {
+	font-size: 15px;
+}
+.page-home .reference-row small {
+	margin-top: 3px;
+	color: var(--muted);
+	font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+	.page-home .hero {
+		grid-template-columns: 1fr;
+	}
+	.page-home .hero-console {
+		max-width: 620px;
+	}
+	.page-home .lab-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 800px) {
+	.page-home .quick-grid,
+	.page-home .lower-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 560px) {
+	.page-home .hero {
+		padding: 24px;
+	}
+	.page-home .hero h2 {
+		font-size: 40px;
+	}
+	.page-home .lab-grid {
+		grid-template-columns: 1fr;
+	}
+	.page-home .quick-grid {
+		margin-bottom: 24px;
+	}
+}
+
+@media (max-width: 480px) {
+	.page-home .hero {
+		min-height: 0;
+		padding: 20px;
+	}
+
+	.page-home .hero h2 {
+		font-size: clamp(34px, 12vw, 42px);
+	}
+
+	.page-home .hero-console pre {
+		padding: 16px;
+		font-size: 13px;
+	}
+}
+
+.page-learning-notes {
+	padding: 20px;
+	margin-top: 14px;
+	border-radius: 14px;
+}
+
+.page-learning-notes h3 {
+	margin: 7px 0 14px;
+	font-size: 20px;
+}
+.page-learning-notes .notes-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+.page-learning-notes .notes-grid div {
+	padding: 14px;
+	border: 1px solid var(--line);
+	border-radius: 11px;
+	background: var(--bg-elevated);
+}
+.page-learning-notes .notes-grid strong {
+	display: block;
+	margin-bottom: 5px;
+}
+.page-learning-notes .notes-grid p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 13px;
+	line-height: 1.65;
+}
+@media (max-width: 760px) {
+	.page-learning-notes .notes-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.page-home .hero h2 {
+	font-size: clamp(34px, 4.5vw, 56px);
+}
+
+.page-home .hero p {
+	font-size: 16px;
+}
+
+.page-home .quick strong,
+.page-home .lab-card strong {
+	font-size: 14px;
+}
+
+.page-home .quick p,
+.page-home .lab-card p,
+.page-home .reference-row small {
+	font-size: 13px;
+}
+
+.page-home .section-head h3,
+.page-home .panel-head h3 {
+	font-size: 19px;
+}
+
+@media (max-width: 640px) {
+	.page-home .hero h2 {
+		font-size: clamp(32px, 11vw, 42px);
+	}
+}

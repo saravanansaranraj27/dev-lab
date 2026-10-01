@@ -1,0 +1,301 @@
+.topbar-component .topbar {
+	min-height: 68px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	margin-bottom: 22px;
+}
+
+.topbar-component .heading {
+	min-width: 0;
+}
+.topbar-component .heading h1 {
+	margin: 5px 0 0;
+	font-size: clamp(26px, 2.4vw, 34px);
+	line-height: 1.05;
+	letter-spacing: -0.045em;
+}
+
+.topbar-component .heading p {
+	margin: 6px 0 0;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.topbar-component .actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.topbar-component .search-button {
+	width: min(300px, 34vw);
+	min-height: 50px;
+	justify-content: flex-start;
+	padding: 0 12px 0 0;
+	text-align: left;
+}
+
+.topbar-component .search-button .search-label {
+	flex: 1;
+	font-size: 13px;
+}
+
+.topbar-component .search-button .search-icon {
+	margin-left: 12px;
+}
+
+.topbar-component .search-button:hover {
+	border-color: var(--line-strong);
+	color: var(--text);
+}
+
+.topbar-component .palette-backdrop {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: grid;
+	place-items: start center;
+	padding: 11vh 18px 30px;
+	background: rgba(0, 0, 0, 0.48);
+}
+
+.topbar-component .palette {
+	width: min(620px, 100%);
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+.topbar-component .palette-search {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	padding: 12px;
+	border-bottom: 1px solid var(--line);
+}
+
+.topbar-component .palette-search > span {
+	color: var(--primary);
+	font-size: 16px;
+}
+.topbar-component .close {
+	width: 26px;
+	height: 26px;
+	border: 0;
+	border-radius: 6px;
+	background: transparent;
+	color: var(--muted);
+	font-size: 17px;
+}
+.topbar-component .close:hover {
+	background: var(--surface-2);
+	color: var(--text);
+}
+.topbar-component .palette-search input {
+	min-height: 34px;
+	border: 0;
+	padding: 0;
+	background: transparent;
+	font-size: 14px;
+}
+
+.topbar-component .palette-search input:focus {
+	border: 0;
+}
+.topbar-component .command-list {
+	padding: 7px;
+}
+.topbar-component .command-list a {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 51px;
+	padding: 8px 9px;
+	border-radius: 9px;
+}
+
+.topbar-component .command-list a:hover {
+	background: color-mix(in srgb, var(--text) 5%, transparent);
+}
+.topbar-component .command-icon {
+	width: 28px;
+	height: 28px;
+	display: grid;
+	place-items: center;
+	border-radius: 7px;
+	background: color-mix(in srgb, var(--primary) 9%, transparent);
+	color: var(--primary);
+}
+
+.topbar-component .command-copy {
+	min-width: 0;
+	flex: 1;
+}
+.topbar-component .command-copy strong,
+.topbar-component .command-copy small {
+	display: block;
+}
+.topbar-component .command-copy strong {
+	font-size: 14px;
+}
+.topbar-component .command-copy small {
+	margin-top: 3px;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.45;
+	overflow-wrap: anywhere;
+}
+
+.topbar-component .empty {
+	padding: 24px;
+	color: var(--muted);
+	text-align: center;
+	font-size: 14px;
+}
+
+@media (max-width: 760px) {
+	.topbar-component .topbar {
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	.topbar-component .heading {
+		flex: 1 1 100%;
+	}
+	.topbar-component .actions {
+		width: 100%;
+		justify-content: flex-end;
+	}
+	.topbar-component .search-button {
+		min-width: 0;
+		width: min(300px, calc(100% - 44px));
+		justify-content: flex-start;
+		padding: 0 9px 0 11px;
+	}
+	.topbar-component .search-label {
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.topbar-component .heading h1 {
+		font-size: 21px;
+	}
+}
+
+@media (max-width: 980px) and (min-width: 761px) {
+	.topbar-component .topbar {
+		align-items: flex-start;
+	}
+	.topbar-component .actions {
+		width: auto;
+	}
+	.topbar-component .search-button {
+		width: min(300px, 34vw);
+		min-width: 0;
+	}
+}
+
+@media (max-width: 560px) {
+	.topbar-component .topbar {
+		gap: 10px;
+		margin-bottom: 16px;
+	}
+
+	.topbar-component .heading {
+		flex: 1 1 auto;
+	}
+
+	.topbar-component .heading h1 {
+		font-size: clamp(22px, 7vw, 28px);
+		line-height: 1.05;
+	}
+
+	.topbar-component .heading p {
+		font-size: 13px;
+	}
+
+	.topbar-component .actions {
+		width: 100%;
+	}
+
+	.topbar-component .search-button {
+		width: min(300px, calc(100% - 42px));
+	}
+}
+
+@media (max-width: 390px) {
+	.topbar-component .search-button {
+		width: min(300px, 100%);
+	}
+	.topbar-component .search-label {
+		font-size: 12px;
+	}
+}
+
+.topbar-component .heading h1 {
+	font-size: clamp(24px, 2.2vw, 32px);
+}
+
+.topbar-component .heading p {
+	font-size: 13px;
+}
+
+.topbar-component .search-label {
+	font-size: 13px;
+}
+
+@media (max-width: 560px) {
+	.topbar-component .heading h1 {
+		font-size: clamp(23px, 7vw, 29px);
+	}
+}
+
+.topbar-component .settings-button {
+	width: 38px;
+	height: 38px;
+	display: grid;
+	place-items: center;
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	background: color-mix(in srgb, var(--surface) 85%, transparent);
+	color: var(--muted);
+	text-decoration: none;
+}
+
+.topbar-component .settings-button:hover {
+	border-color: var(--line-strong);
+	color: var(--text);
+	background: var(--surface-2);
+}
+
+@media (max-width: 560px) {
+	.topbar-component .actions {
+		gap: 6px;
+	}
+
+	.topbar-component .settings-button {
+		width: 36px;
+		height: 36px;
+	}
+}
+
+@media (max-width: 390px) {
+	.topbar-component .search-button {
+		width: 132px;
+	}
+
+	.topbar-component .search-label {
+		font-size: 11px;
+	}
+}
+
+.topbar-component .settings-button {
+	text-decoration: none;
+}
+
+.topbar-component .heading .eyebrow,
+.topbar-component .heading h1 {
+	color: var(--primary);
+}

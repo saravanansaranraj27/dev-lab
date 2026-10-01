@@ -1,0 +1,449 @@
+.page-learn .toolbar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 9px;
+	margin-bottom: 12px;
+	border-radius: 13px;
+}
+
+.page-learn .search-wrap {
+	min-width: 220px;
+	flex: 1;
+}
+
+.page-learn .filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	min-width: 0;
+}
+.page-learn .filters button {
+	min-height: 32px;
+	padding: 0 10px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	background: transparent;
+	color: var(--muted);
+	font-size: 14px;
+}
+
+.page-learn .filters button.active {
+	color: var(--primary-soft);
+	border-color: color-mix(in srgb, var(--primary) 25%, transparent);
+	background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+
+.page-learn .learn-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 12px;
+	align-items: start;
+}
+
+.page-learn .lesson-catalog {
+	min-width: 0;
+	height: min(720px, calc(100vh - 205px));
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 4px;
+	scrollbar-width: thin;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+}
+
+.page-learn .lesson-detail {
+	min-width: 0;
+}
+
+@media (min-width: 901px) {
+	.page-learn .lesson-detail {
+		position: sticky;
+		top: 18px;
+	}
+}
+
+.page-learn .catalog-head {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	padding: 5px 2px 10px;
+	color: var(--muted);
+	font-size: 14px;
+}
+
+.page-learn .lesson-card {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 36px 1fr auto;
+	gap: 10px;
+	align-items: center;
+	padding: 13px;
+	margin-bottom: 6px;
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	background: color-mix(in srgb, var(--surface) 88%, transparent);
+	color: var(--text);
+	text-align: left;
+}
+
+.page-learn .lesson-card:hover {
+	border-color: var(--line-strong);
+}
+.page-learn .lesson-card.selected {
+	border-color: color-mix(in srgb, var(--primary) 34%, transparent);
+	background: color-mix(in srgb, var(--primary) 6%, var(--surface));
+}
+
+.page-learn .lesson-badge {
+	width: 36px;
+	height: 36px;
+	display: grid;
+	place-items: center;
+	border-radius: 9px;
+	background: var(--surface-2);
+	color: var(--primary);
+	font:
+		800 11px ui-monospace,
+		monospace;
+}
+
+.page-learn .lesson-info {
+	min-width: 0;
+}
+.page-learn .lesson-info strong,
+.page-learn .lesson-info small,
+.page-learn .lesson-info > span {
+	display: block;
+}
+.page-learn .lesson-info strong {
+	font-size: 15px;
+	line-height: 1.35;
+}
+.page-learn .lesson-info small {
+	margin-top: 4px;
+	color: var(--primary-soft);
+	font-size: 14px;
+	line-height: 1.4;
+}
+.page-learn .lesson-info > span {
+	margin-top: 6px;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.5;
+}
+.page-learn .chevron {
+	color: var(--muted);
+}
+
+.page-learn .lesson-detail {
+	min-height: 500px;
+	padding: 24px;
+	border-radius: 15px;
+}
+.page-learn .detail-top {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+.page-learn .detail-top h2 {
+	margin: 8px 0 7px;
+	font-size: clamp(26px, 3vw, 34px);
+	letter-spacing: -0.045em;
+}
+.page-learn .detail-top p {
+	max-width: 650px;
+	color: var(--muted);
+	font-size: 15px;
+	line-height: 1.7;
+}
+.page-learn .time {
+	color: var(--muted);
+	font:
+		12px ui-monospace,
+		monospace;
+}
+
+.page-learn .topics {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin: 17px 0;
+}
+.page-learn .topics span {
+	padding: 6px 9px;
+	border: 1px solid var(--line);
+	border-radius: 7px;
+	color: var(--muted);
+	font-size: 14px;
+}
+
+.page-learn .concept-card {
+	padding: 12px;
+	border: 0;
+	border-radius: 10px;
+	background: var(--surface-2);
+}
+
+.page-learn .tip-label {
+	display: block;
+	color: var(--primary);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.page-learn .concept-card p {
+	margin: 8px 0 0;
+	color: var(--text-2);
+	font-size: 15px;
+	line-height: 1.65;
+}
+
+.page-learn .example {
+	margin-top: 18px;
+}
+.page-learn .example-head {
+	display: flex;
+	gap: 12px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	color: var(--primary);
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+.page-learn .notes-button {
+	min-height: 34px;
+	padding: 0 10px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--surface);
+	color: var(--primary);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: normal;
+	text-transform: none;
+}
+.page-learn .learn-code {
+	margin-top: 0;
+}
+.page-learn .note {
+	margin-top: 9px;
+	padding: 12px;
+	border-radius: 8px;
+	background: var(--surface-2);
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.65;
+}
+
+.page-learn .detail-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 18px;
+}
+.page-learn .empty {
+	padding: 25px;
+	color: var(--muted);
+	text-align: center;
+	font-size: 14px;
+	border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+	.page-learn .learn-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.page-learn .lesson-catalog {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 7px;
+		height: min(520px, 48vh);
+	}
+
+	.page-learn .catalog-head,
+	.page-learn .empty {
+		grid-column: 1 / -1;
+	}
+}
+
+@media (max-width: 650px) {
+	.page-learn .toolbar {
+		display: block;
+	}
+
+	.page-learn .filters {
+		margin-top: 7px;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		padding-bottom: 3px;
+		scrollbar-width: thin;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.page-learn .filters button {
+		flex: 0 0 auto;
+		font-size: 14px;
+	}
+
+	.page-learn .lesson-catalog {
+		display: block;
+		height: min(420px, 48vh);
+		padding-right: 2px;
+	}
+
+	.page-learn .lesson-detail {
+		padding: 18px;
+	}
+
+	.page-learn .detail-top {
+		display: block;
+	}
+
+	.page-learn .time {
+		display: block;
+		margin-top: 8px;
+	}
+
+	.page-learn .detail-top h2 {
+		font-size: 28px;
+	}
+
+	.page-learn .detail-top p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.page-learn .lesson-detail {
+		padding: 14px;
+	}
+
+	.page-learn .detail-top h2 {
+		font-size: 25px;
+	}
+
+	.page-learn .lesson-card {
+		grid-template-columns: 34px minmax(0, 1fr) auto;
+		padding: 11px;
+	}
+
+	.page-learn .example-head {
+		align-items: flex-start;
+	}
+
+	.page-learn .notes-button {
+		flex: 0 0 auto;
+	}
+
+	.page-learn .learn-code pre {
+		padding: 16px 66px 16px 14px;
+		font-size: 14px;
+		line-height: 1.75;
+	}
+
+	.page-learn .learn-code .copy-button {
+		top: 8px;
+		right: 8px;
+	}
+}
+
+.page-learn .detail-actions .disabled-action {
+	cursor: default;
+	opacity: 0.72;
+}
+
+.page-learning-notes {
+	padding: 20px;
+	margin-top: 14px;
+	border-radius: 14px;
+}
+
+.page-learning-notes h3 {
+	margin: 7px 0 14px;
+	font-size: 22px;
+}
+.page-learning-notes .notes-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+.page-learning-notes .notes-grid div {
+	padding: 14px;
+	border: 1px solid var(--line);
+	border-radius: 11px;
+	background: var(--bg-elevated);
+}
+.page-learning-notes .notes-grid strong {
+	display: block;
+	margin-bottom: 5px;
+}
+.page-learning-notes .notes-grid p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.65;
+}
+@media (max-width: 760px) {
+	.page-learning-notes .notes-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.page-learn .snippet-code pre {
+	font-size: 14px;
+}
+
+@media (max-width: 760px) {
+	.page-learn .snippet-code pre {
+		font-size: 13.5px;
+	}
+}
+
+@media (min-width: 901px) {
+	.page-learn .learn-layout {
+		align-items: stretch;
+		grid-template-rows: minmax(0, 1fr);
+	}
+
+	.page-learn .lesson-catalog,
+	.page-learn .lesson-detail {
+		height: min(720px, calc(100vh - 205px));
+		min-height: 0;
+	}
+
+	.page-learn .lesson-detail {
+		overflow-y: auto;
+		overflow-x: hidden;
+		overscroll-behavior: contain;
+		scrollbar-width: thin;
+	}
+}
+
+@media (max-width: 900px) {
+	.page-learn .lesson-catalog,
+	.page-learn .lesson-detail {
+		height: auto;
+	}
+}
+
+.page-learn .lesson-catalog {
+	height: min(720px, calc(100dvh - 205px));
+}
+
+@media (max-width: 900px) {
+	.page-learn .lesson-catalog {
+		height: min(520px, 52dvh);
+	}
+}
+
+@media (max-width: 650px) {
+	.page-learn .lesson-catalog {
+		height: min(460px, 55dvh);
+	}
+}
